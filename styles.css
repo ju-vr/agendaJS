@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #a64ac9;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 1.2px;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 12px;
+    margin: 10px 8px 10px 0;
+    border: 2px solid #e0b0ff;
+    border-radius: 14px;
+    font-size: 16px;
+    width: 260px;
+    background-color: #fff7fb;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #c084f5;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #c084f5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(200, 132, 245, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: #b06ed7;
+    transform: translateY(-3px) scale(1.05);
+}
+
+button::before {
+    content: "➕";
+    font-size: 18px;
+}
+
+#lista-de-tarefas {
+    margin-top: 35px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#lista-de-tarefas div {
+    background-color: #fffafd;
+    padding: 18px 22px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(174, 122, 226, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 8px solid #c084f5;
+    position: relative;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#lista-de-tarefas div:hover {
+    background-color: #f9e7ff;
+    transform: scale(1.02);
+    box-shadow: 0 14px 25px rgba(174, 122, 226, 0.2);
+}
+
+.feito {
+    text-decoration: line-through;
+    color: #bba9c9;
+    font-style: italic;
+}
+
+span {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.4);
+    cursor: pointer;
+    accent-color: #d46ac2;
+    margin-right: 12px;
+    transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.5);
+}
+
+.btn-apagar {
+    background-color: transparent;
+    color: #e1708c;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-apagar:hover {
+    transform: scale(1.3) rotate(10deg);
+    color: #d84d6d;
+}
+
+/* Emoji personalizado para as tarefas */
+span::before {
+    content: "🌸";
+    font-size: 20px;
+}
+
+/* Emoji para tarefas feitas */
+.feito::before {
+    content: "✅";
+    margin-right: 6px;
+}
+
+/* Para botões apagar, emoji X */
+.btn-apagar::after {
+    content: "❌";
+    pointer-events: none;
+}
+
+
+
+
+
